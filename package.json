@@ -1,0 +1,20 @@
+{
+  "name": "koshelek",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Ga11et/koshelek.git",
+  "author": "Fyodor <f.sivkov@positron-it.ru>",
+  "license": "MIT",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "start": "node ./.output/server/index.mjs"
+  },
+  "dependencies": {
+    "@nuxtjs/robots": "^3.0.0"
+  },
+  "devDependencies": {
+    "nuxt": "^3.11.2",
+    "sass": "^1.75.0"
+  }
+}
