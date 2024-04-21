@@ -1,0 +1,4 @@
+[
+  { "title": "Order book", "slug": "/", "icon": "home" },
+  { "title": "Settings", "slug": "/settings", "icon": "cog" }
+]

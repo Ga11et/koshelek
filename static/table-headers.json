@@ -1,0 +1,5 @@
+[
+  { "title": "Price", "value": "price", "width": 100 },
+  { "title": "Quantity", "value": "quantity", "width": 100 },
+  { "title": "Total", "value": "total", "width": 150, "additional": true }
+]

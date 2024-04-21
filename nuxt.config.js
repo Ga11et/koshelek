@@ -1,6 +1,6 @@
 export default defineNuxtConfig({
   devServer: {
-    port: process.env.PORT || 3000,
+    port: process.env.PORT || 4444,
     host: process.env.HOST || "0.0.0.0",
   },
 
@@ -9,7 +9,7 @@ export default defineNuxtConfig({
       title: "Koshelek",
       titleTemplate: "%s | Koshelek",
       htmlAttrs: {
-        lang: "ru",
+        lang: "en",
       },
       meta: [
         { name: "viewport", content: "width=device-width, initial-scale=1.0, user-scalable=0" },
@@ -29,7 +29,7 @@ export default defineNuxtConfig({
     compressPublicAssets: true,
   },
 
-  modules: ["@nuxtjs/robots"],
+  modules: ["@nuxtjs/robots", "vuetify-nuxt-module"],
 
   robots: {
     UserAgent: "*",
@@ -38,7 +38,8 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      serverUrl: process.env.SERVER_URL || "http://localhost:3000",
+      serverUrl: process.env.SERVER_URL || "https://api.binance.com/api/v3",
+      wsUrl: process.env.WS_URL || "wss://stream.binance.com/stream",
     },
   },
 
