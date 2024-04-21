@@ -8,7 +8,7 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
-    "start": "cross-env PORT=4444 node ./.output/server/index.mjs"
+    "start": "cross-env NODE_EXTRA_CA_CERTS=./certs/intermediate.pem PORT=4444 node ./.output/server/index.mjs"
   },
   "dependencies": {
     "@nuxtjs/robots": "^3.0.0"

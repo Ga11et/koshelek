@@ -1,5 +1,5 @@
 <template>
-  <v-container v-if="!pending" fluid class="bg-indigo-lighten-5 h-100">
+  <v-container v-if="!pending && stream" fluid class="bg-indigo-lighten-5 h-100">
     <v-row class="h-100" no-gutters>
       <v-col cols="12" md="6" class="bg-green-lighten-4 main-table">
         <BaseTable :rows="stream.bids" title="Bids" class="main-table__element pa-4" />
@@ -41,7 +41,7 @@ const errorHandler = (event) => {
   console.log("web socket error", event);
 };
 const messageHandler = (event) => {
-  if (!event?.data) return;
+  if (!stream.value || !event?.data) return;
   const message = JSON.parse(event.data);
   if (!message?.data) return;
 
