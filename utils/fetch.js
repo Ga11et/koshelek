@@ -2,7 +2,11 @@ export const baseFetch = (req, opts) => {
   return $fetch(req, {
     ...opts,
     onRequest({ request, options }) {},
-    onRequestError({ request, options, error }) {},
+    onRequestError({ request, options, error }) {
+      console.log("fetch error");
+      console.log(error);
+      console.log(error.data);
+    },
     onResponse({ request, options, response }) {},
     onResponseError({ request, options, response }) {},
   });
